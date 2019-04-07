@@ -2,6 +2,7 @@
 #include "invoice.h"
 #include "textprinter.h"
 
+
 int main() {
     Invoice invoice;
     Product superMob("Super Mob", 12.90);
