@@ -5,12 +5,16 @@
 #include <vector>
 #include "product.h"
 #include "item.h"
+#include <iostream>
 
 using std::vector;
 
 class Invoice {
 public:
     void add(Product product, int quantity);
+    vector<Product> getProducts();
+private:
+    vector<Product> products;
 };
 
 
