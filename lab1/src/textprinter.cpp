@@ -5,7 +5,7 @@
 using std::endl;
 
 void TextPrinter::print(std::ostream &out, Invoice invoice) {
-    
+
     out << std::fixed << std::setprecision(2);
 
     for (auto item : invoice.getItems()) {
@@ -16,4 +16,5 @@ void TextPrinter::print(std::ostream &out, Invoice invoice) {
             << endl;
     }
 
+    out << "Subtotal: " << invoice.computeSubtotal() << endl;
 }
