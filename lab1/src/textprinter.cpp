@@ -4,7 +4,9 @@
 using std::endl;
 
 void TextPrinter::print(std::ostream &out, Invoice invoice) {
-    for (auto product : invoice.getProducts()) {
-        out << product.getName() << " (" << product.getPrice() << ") " << endl;
+    for (auto item : invoice.getItems()) {
+        out << item.getQuantity() << " "
+            << item.getProduct().getName() 
+            << " x" << " (" << item.getProduct().getPrice() << ") " << endl;
     }
 }
